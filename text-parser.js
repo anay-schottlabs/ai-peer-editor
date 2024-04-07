@@ -1,4 +1,8 @@
-textBox = document.querySelector("#text-box");
-parsedText = document.querySelector("#parsed-text");
+class TextParser
+{
+    static textBox = document.querySelector("#text-box");
+    static parseTextToArray = () => TextParser.textBox.value.split(" ");
+}
 
-textBox.addEventListener("input", () => parsedText.innerHTML = textBox.value.split(" "));
+var parsedText = document.querySelector("#parsed-text");
+TextParser.textBox.addEventListener("input", () => parsedText.innerHTML = TextParser.parseTextToArray())
